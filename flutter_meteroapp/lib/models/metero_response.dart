@@ -1,5 +1,5 @@
-class AutoGenerate {
-  AutoGenerate({
+class MeteroResponse {
+  MeteroResponse({
     required this.coord,
     required this.weather,
     required this.base,
@@ -28,7 +28,7 @@ class AutoGenerate {
   late final String name;
   late final int cod;
   
-  AutoGenerate.fromJson(Map<String, dynamic> json){
+  MeteroResponse.fromJson(Map<String, dynamic> json){
     coord = Coord.fromJson(json['coord']);
     weather = List.from(json['weather']).map((e)=>Weather.fromJson(e)).toList();
     base = json['base'];
@@ -222,5 +222,7 @@ class Sys {
     _data['sunrise'] = sunrise;
     _data['sunset'] = sunset;
     return _data;
+
+    
   }
 }
