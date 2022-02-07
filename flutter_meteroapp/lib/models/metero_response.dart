@@ -223,6 +223,5 @@ class Sys {
     _data['sunset'] = sunset;
     return _data;
 
-    
   }
 }
