@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
+
             return Text(items.elementAt(index).description);
           },
         ),
@@ -52,6 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class MapSample extends StatefulWidget {
+  const MapSample({Key? key}) : super(key: key);
+
   @override
   State<MapSample> createState() => MapSampleState();
 }
@@ -80,7 +83,7 @@ class MapSampleState extends State<MapSample> {
           _controller.complete(controller);
         },
         onTap: (LatLng posicion) {
-          //TODO
+      
         },
       ),
       floatingActionButton: FloatingActionButton.extended(
@@ -90,7 +93,7 @@ class MapSampleState extends State<MapSample> {
       ),
     );
   }
-
+  
   Future<void> _goToTheLake() async {
     final GoogleMapController controller = await _controller.future;
     controller.animateCamera(CameraUpdate.newCameraPosition(_kLake));
