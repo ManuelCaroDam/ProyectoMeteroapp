@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -47,9 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         ),
     );
-    
   }
-  
 }
 
 class MapSample extends StatefulWidget {
@@ -64,7 +61,7 @@ class MapSampleState extends State<MapSample> {
 
   static const CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(37.42796133580664, -122.085749655962),
-    zoom: 14.4746,
+    zoom: 14.4746
   );
 
   static const CameraPosition _kLake = CameraPosition(
@@ -82,10 +79,12 @@ class MapSampleState extends State<MapSample> {
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
         },
+        
         onTap: (LatLng posicion) {
       
         },
       ),
+
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _goToTheLake,
         label: const Text('To the lake!'),

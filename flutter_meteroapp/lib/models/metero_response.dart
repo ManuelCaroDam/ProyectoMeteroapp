@@ -14,6 +14,7 @@ class MeteroResponse {
     required this.name,
     required this.cod,
   });
+  
   late final Coord coord;
   late final List<Weather> weather;
   late final String base;
@@ -90,6 +91,7 @@ class Weather {
     required this.main,
     required this.description,
     required this.icon,
+
   });
   late final int id;
   late final String main;
@@ -122,6 +124,7 @@ class Main {
     required this.pressure,
     required this.humidity,
   });
+
   late final double temp;
   late final double feelsLike;
   late final double tempMin;
