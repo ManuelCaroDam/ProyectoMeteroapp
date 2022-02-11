@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'models/metero_response.dart';
+import 'package:flutter_json_list/models/metero_response.dart';
 
 void main() {
   runApp(const MyApp());
